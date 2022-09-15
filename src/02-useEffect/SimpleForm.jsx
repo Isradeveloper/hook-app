@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { Message } from './Message'
+import { Who } from './Who'
 
 export const SimpleForm = () => {
   const [formState, setFormState] = useState({
@@ -29,14 +31,6 @@ export const SimpleForm = () => {
     console.log('Email called')
   }, [email])
 
-  useEffect(() => {
-    first
-
-    return () => {
-      second
-    }
-  }, [third])
-
   // [] Sólo se ejecuta una sola vez, cuando el componente se renderiza
   // [formState] Se ejecuta cuando el formulario es modificado
   // [email] Se ejecuta cuando el email cambia
@@ -62,6 +56,11 @@ export const SimpleForm = () => {
         value={email}
         onChange={(e) => onInputChange(e)}
       />
+
+      <Who username={username} />
+      {
+        username === 'stryder2' && <Message />
+      }
 
     </>
 
