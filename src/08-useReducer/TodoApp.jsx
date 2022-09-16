@@ -5,11 +5,11 @@ import { useToDo } from '../hooks/useToDo'
 
 export const TodoApp = () => {
 
-  const { todos, handleNewTodo, handleToggleTodo, handleDeleleTodo } = useToDo()
+  const { todos, todosCount, pendingTodosCount, handleNewTodo, handleToggleTodo, handleDeleleTodo } = useToDo()
 
   return (
     <>
-      <h1>TodoApp: {todos.length}, <small>pendientes: 2</small></h1>
+      <h1>TodoApp: {todosCount}, <small>pendientes: {pendingTodosCount}</small></h1>
       <hr />
 
       <div className='row'>
