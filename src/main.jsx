@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { MultipleCustomHooks } from './03-example/MultipleCustomHooks'
-import { FocusScreen } from './04-useRef/FocusScreen'
-import { Layout } from './05-useLayoutEffect/Layout'
-import { CallbackHooks } from './06-memos/CallBackHooks'
-import { MemoHook } from './06-memos/MemoHook'
-import { Memorize } from './06-memos/Memorize'
+// import { MultipleCustomHooks } from './03-example/MultipleCustomHooks'
+// import { FocusScreen } from './04-useRef/FocusScreen'
+// import { Layout } from './05-useLayoutEffect/Layout'
+// import { CallbackHooks } from './06-memos/CallBackHooks'
+// import { MemoHook } from './06-memos/MemoHook'
+// import { Memorize } from './06-memos/Memorize'
 import { Padre } from './07-tarea-memo/Padre'
 import { HooksApp } from './HooksApp'
 // import { FormWithCustomHook } from './02-useEffect/FormWithCustomHook'
@@ -14,23 +14,24 @@ import { HooksApp } from './HooksApp'
 // import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <HooksApp />
-    {/* USE STATE */}
-    {/* <CounterApp />
-    <CounterWithCustomHook /> */}
+import './08-useReducer/intro-reducer'
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <React.StrictMode>
+//     <HooksApp />
+//     {/* USE STATE */}
+//     {/* <CounterApp />
+//     <CounterWithCustomHook /> */}
 
-    {/* USE EFFECT */}
-    {/* <SimpleForm /> */}
-    {/* <FormWithCustomHook /> */}
-    {/* <MultipleCustomHooks /> */}
-    {/* <FocusScreen /> */}
-    {/* <Layout /> */}
-    {/* <Memorize /> */}
-    {/* <MemoHook /> */}
-    {/* <CallbackHooks /> */}
-    <Padre />
+//     {/* USE EFFECT */}
+//     {/* <SimpleForm /> */}
+//     {/* <FormWithCustomHook /> */}
+//     {/* <MultipleCustomHooks /> */}
+//     {/* <FocusScreen /> */}
+//     {/* <Layout /> */}
+//     {/* <Memorize /> */}
+//     {/* <MemoHook /> */}
+//     {/* <CallbackHooks /> */}
+//     <Padre />
 
-  </React.StrictMode>
-)
+//   </React.StrictMode>
+// )
