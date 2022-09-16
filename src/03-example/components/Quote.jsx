@@ -1,16 +1,14 @@
-import { useCounter, useFetch } from '../../hooks'
+import { useFetch } from '../../hooks'
 
 export const Quote = ({ quote, author, series }) => {
-  const { counter, increment } = useCounter(1)
-  const { data, isLoading, hasError } = useFetch(`https://breakingbadapi.com/api/characters/${counter}`)
-  const { char_id, name, img } = !!data && data[0]
-
-  let imagen = ''
-  if (name === author) {
-    imagen = img
-  } else {
-    imagen = ''
+  let formatAuthor = author.replace(/ /g, '+')
+  if (author === 'Hank Schrader') {
+    formatAuthor = 'Henry+Schrader'
   }
+  const { data } = useFetch(`https://breakingbadapi.com/api/characters?name=${formatAuthor}`)
+  const { img } = !!data && data[0]
+  // console.log(author, name)
+
   return (
     <div className='contenedor'>
       <div className='quote'>
@@ -24,7 +22,7 @@ export const Quote = ({ quote, author, series }) => {
         </figure>
       </div>
       <div className='imagen'>
-        <img src={imagen} alt={author} />
+        <img src={img} alt={author} />
       </div>
     </div>
   )

@@ -19,8 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* USE EFFECT */}
     {/* <SimpleForm /> */}
     {/* <FormWithCustomHook /> */}
-    {/* <MultipleCustomHooks /> */}
-    <FocusScreen />
+    <MultipleCustomHooks />
+    {/* <FocusScreen /> */}
 
   </React.StrictMode>
 )
