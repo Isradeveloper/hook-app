@@ -1,18 +1,18 @@
 import { useState } from 'react'
 
-export const useForm = (initalForm = {}) => {
-  const [formState, setFormState] = useState({ initalForm })
+export const useForm = (initialForm = {}) => {
+  const [formState, setFormState] = useState(initialForm)
 
-  const onInputChange = ({ target }) => { // Propiedad target de event
-    const { name, value } = target // Propiedades name y value de target
-    setFormState({ // Cambia el objeto
-      ...formState, // Traemos todos los datos del objeto original
-      [name]: value // Teniendo el name seleccionado se remplazara en la propiedad con su mismo nombre
+  const onInputChange = ({ target }) => {
+    const { name, value } = target
+    setFormState({
+      ...formState,
+      [name]: value
     })
   }
 
   const onResetForm = () => {
-    setFormState(initalForm)
+    setFormState(initialForm)
   }
 
   return {
