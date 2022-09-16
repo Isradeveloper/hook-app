@@ -1,8 +1,6 @@
 import { TodoItem } from './TodoItem'
 
 export const TodoList = ({ arreglo }) => {
-  console.log(arreglo)
-
   return (
     <ul className='list-group'>
       {

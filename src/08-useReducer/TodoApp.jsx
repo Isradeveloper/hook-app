@@ -16,7 +16,6 @@ const initialState = [
     description: 'Recolectar la piedra del tiempo',
     done: false
   }
-
 ]
 
 export const TodoApp = () => {
@@ -24,7 +23,12 @@ export const TodoApp = () => {
   const [todos, dispatch] = useReducer(todoReducer, initialState)
 
   const handleNewTodo = (todo) => {
-    console.log({ todo })
+    const action = {
+      type: '[TODO] Add Todo',
+      payload: todo
+    }
+
+    dispatch(action)
   }
 
   return (
@@ -41,7 +45,7 @@ export const TodoApp = () => {
         <div className='col-5'>
           <h4>Agregar TODO</h4>
           <hr />
-          <TodoAdd onNewTodo={handleNewTodo} />
+          <TodoAdd onNewTodo={(newTodo) => handleNewTodo(newTodo)} />
         </div>
       </div>
     </>

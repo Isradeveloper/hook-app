@@ -2,12 +2,12 @@ import { useForm } from '../../hooks/useForm'
 
 export const TodoAdd = ({ onNewTodo }) => {
   const { description, onInputChange, onResetForm } = useForm({
-    value: 3, description: '1'
+    description: ''
   })
 
   const onFormSubmit = (event) => {
     event.preventDefault()
-    if (description.length === 1) return
+    if (description.length <= 1) return
 
     const newTodo = {
       id: new Date().getTime(),
